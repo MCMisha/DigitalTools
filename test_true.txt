@@ -1,0 +1,14 @@
+Adam,Bartek
+Adam,Cezary
+Bartek,Dawid
+Cezary,Dawid
+Dawid,Emil
+Emil,Filip
+Filip,Gabriel
+Gabriel,Hanna
+Hanna,Irena
+Irena,Jan
+Adam,Filip
+Bartek,Gabriel
+Cezary,Hanna
+Emil,Irena
