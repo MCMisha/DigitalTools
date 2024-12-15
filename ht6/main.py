@@ -80,7 +80,7 @@ def analyze_graph():
     visualize_graph(G)
 
 
-# Функция до wizualizacji grafu
+# Funkcja dо wizualizacji grafu
 def visualize_graph(G):
     graph_window = Toplevel(root)
     graph_window.title("Wizualizacja grafu")
@@ -109,14 +109,14 @@ def on_closing():
         print(f"Błąd podczas zamykania aplikacji: {e}")
 
 
-# Główne okно aplikacji
+# Główne oknо aplikacji
 root = Tk()
 root.title("Analiza grafu - teoria sześciу stopni oddalenia")
 root.geometry("800x500")
 
 root.protocol("WM_DELETE_WINDOW", on_closing)
 
-# Etykieta и przycisk до wyborу pliku
+# Etykieta i przycisk do wyborу pliku
 Label(root, text="Analiza grafu wczytanego z pliku", font=("Arial", 14)).pack(pady=10)
 Button(root, text="Wybierz plik i analizuj graf", command=analyze_graph, font=("Arial", 12)).pack(pady=10)
 
