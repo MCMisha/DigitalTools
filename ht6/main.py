@@ -42,7 +42,8 @@ def analyze_graph():
 
     # Wczytanie grafu
     G = read_graph_from_file(file_path)
-
+    info_text.config(state="normal")
+    theory_text.config(state="normal")
     # Wyświetlenie liczby wierzchołków i krawędzi
     info_text.delete("1.0", END)
     info_text.insert(END, f"Liczba wierzchołków: {len(G.nodes)}\n")
@@ -70,12 +71,12 @@ def analyze_graph():
     components = nx.connected_components(G)
     info_text.insert(END, f"Liczba składowych spójności: {nx.number_connected_components(G)}\n")
     info_text.insert(END, f"Rozmiary składowych spójności: {[len(c) for c in components]}\n")
-
+    info_text.config(state="disabled")
 # Sprawdzanie teorii sześciу stopni oddalenia
     theory_result = check_six_degrees_theory(G)
     theory_text.delete("1.0", END)
     theory_text.insert(END, theory_result)
-
+    theory_text.config(state="disabled")
     # Wizualizacja grafu w nowym oknie
     visualize_graph(G)
 
@@ -123,13 +124,12 @@ Button(root, text="Wybierz plik i analizuj graf", command=analyze_graph, font=("
 # Pole tekstowe dla informacji o grafie
 Label(root, text="Informacje o grafie:", font=("Arial", 12)).pack(pady=5)
 info_text = Text(root, height=6, width=90, font=("Arial", 10))
-info_text.config(state="disabled")
+
 info_text.pack(pady=5)
 
 # Pole tekstowe dla informacji o sprawdzieniu teorii
 Label(root, text="Wynik sprawdzania teorii sześciу stopni oddalenia:", font=("Arial", 12)).pack(pady=5)
 theory_text = Text(root, height=12, width=90, font=("Arial", 10))
-theory_text.config(state="disabled")
 theory_text.pack(pady=5)
 
 # Uruchomienie aplikacji
