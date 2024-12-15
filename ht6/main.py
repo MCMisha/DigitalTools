@@ -15,7 +15,7 @@ def read_graph_from_file(file_path):
     return G
 
 
-# Funkcja sprawdzająca teorię sześciу stopni oddalenia
+# Funkcja sprawdzająca teorię sześciu stopni oddalenia
 def check_six_degrees_theory(G):
     result = "\nSprawdzanie teorii sześciу stopni oddalenia:\n"
     all_pairs_shortest_paths = dict(nx.all_pairs_shortest_path_length(G))
