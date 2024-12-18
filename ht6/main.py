@@ -102,13 +102,8 @@ def visualize_graph(G):
 
 
 def on_closing():
-    try:
-        print("Zamykanie aplikacji...")
-        root.quit()
-        root.destroy()
-    except Exception as e:
-        print(f"Błąd podczas zamykania aplikacji: {e}")
-
+    root.quit()
+    root.destroy()
 
 # Główne oknо aplikacji
 root = Tk()
