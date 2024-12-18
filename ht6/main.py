@@ -123,7 +123,7 @@ info_text = Text(root, height=6, width=90, font=("Arial", 10))
 info_text.pack(pady=5)
 
 # Pole tekstowe dla informacji o sprawdzieniu teorii
-Label(root, text="Wynik sprawdzania teorii sześciу stopni oddalenia:", font=("Arial", 12)).pack(pady=5)
+Label(root, text="Wynik sprawdzania teorii sześciu stopni oddalenia:", font=("Arial", 12)).pack(pady=5)
 theory_text = Text(root, height=12, width=90, font=("Arial", 10))
 theory_text.pack(pady=5)
 
