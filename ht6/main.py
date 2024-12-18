@@ -89,9 +89,9 @@ def visualize_graph(G):
     pos = nx.spring_layout(G)
 
     # Rysowanie grafu
-    nx.draw_networkx_nodes(G, pos, node_size=700, node_color='lightblue')
+    nx.draw_networkx_nodes(G, pos, node_size=1500, node_color='lightblue')
     nx.draw_networkx_edges(G, pos, width=2, edge_color='gray')
-    nx.draw_networkx_labels(G, pos, font_size=12, font_color='black')
+    nx.draw_networkx_labels(G, pos, font_size=10, font_color='black')
     plt.title("Graf wczytany z pliku", fontsize=14)
     plt.axis('off')
 
